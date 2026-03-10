@@ -1,0 +1,9 @@
+1:"$Sreact.fragment"
+2:I[55854,["/fridgechef/_next/static/chunks/0dc45e63feb75c5a.js","/fridgechef/_next/static/chunks/a7d97229f942fc9f.js"],"ClientPageRoot"]
+3:I[69840,["/fridgechef/_next/static/chunks/568e46a928054f98.js","/fridgechef/_next/static/chunks/cf7fa7598863f501.js","/fridgechef/_next/static/chunks/6deab46ec911f265.js","/fridgechef/_next/static/chunks/3fd32345a56e108d.js","/fridgechef/_next/static/chunks/047bd54ea399a001.js"],"default"]
+6:I[41199,["/fridgechef/_next/static/chunks/0dc45e63feb75c5a.js","/fridgechef/_next/static/chunks/a7d97229f942fc9f.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+0:{"buildId":"-NRmzoAEzcyllAHBSjiaL","rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/fridgechef/_next/static/chunks/047bd54ea399a001.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"loading":null,"isPartial":false}
+4:{}
+5:{}
+8:null
