@@ -6,6 +6,15 @@ import { Clock, Users } from 'lucide-react';
 import StarRating from '@/components/ui/StarRating';
 import Badge from '@/components/ui/Badge';
 
+const RECIPE_IMAGES: Record<string, string> = {
+  'sample-1': 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400&h=300&fit=crop',
+  'sample-2': 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=400&h=300&fit=crop',
+  'sample-3': 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop',
+  'sample-4': 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop',
+  'sample-5': 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=300&fit=crop',
+  'sample-6': 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&h=300&fit=crop',
+};
+
 export default function SampleRecipes() {
   return (
     <section id="recipes" className="py-20 bg-white">
@@ -16,10 +25,10 @@ export default function SampleRecipes() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold font-heading">
+          <h2 className="text-3xl sm:text-4xl font-heading">
             Sample <span className="gradient-brand-text">Recipes</span>
           </h2>
-          <p className="text-muted-foreground mt-3 max-w-lg mx-auto">
+          <p className="text-muted-foreground mt-3 max-w-lg mx-auto opacity-70">
             Here&apos;s a taste of what our AI chef can create
           </p>
         </motion.div>
@@ -32,21 +41,25 @@ export default function SampleRecipes() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-white rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1 group"
+              className="bg-white rounded-2xl border border-border overflow-hidden shadow-md hover:shadow-2xl transition-all hover:-translate-y-1 group"
             >
-              {/* Card header with emoji */}
-              <div className="h-40 bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center">
-                <span className="text-7xl group-hover:scale-110 transition-transform duration-300">
-                  {recipe.image_emoji}
-                </span>
+              {/* Card header with image */}
+              <div className="h-40 bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center relative overflow-hidden">
+                {RECIPE_IMAGES[recipe.id] ? (
+                  <img src={RECIPE_IMAGES[recipe.id]} alt={recipe.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                ) : (
+                  <span className="text-7xl group-hover:scale-110 transition-transform duration-300">
+                    {recipe.image_emoji}
+                  </span>
+                )}
               </div>
 
               {/* Card body */}
               <div className="p-5 space-y-3">
                 <h3 className="font-bold font-heading text-lg leading-tight">{recipe.title}</h3>
-                <p className="text-sm text-muted-foreground line-clamp-2">{recipe.description}</p>
+                <p className="text-sm text-muted-foreground line-clamp-2 opacity-70">{recipe.description}</p>
 
-                <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                <div className="flex items-center gap-3 text-xs text-muted-foreground opacity-50">
                   <span className="flex items-center gap-1">
                     <Clock className="w-3.5 h-3.5" />
                     {recipe.cooking_time} min

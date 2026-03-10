@@ -6,7 +6,7 @@ import Dropdown from '@/components/ui/Dropdown';
 import RadioGroup from '@/components/ui/RadioGroup';
 import Button from '@/components/ui/Button';
 import { DIETARY_OPTIONS, CUISINE_OPTIONS, COOKING_TIME_OPTIONS, SKILL_LEVEL_OPTIONS } from '@/lib/constants';
-import { Sparkles, AlertCircle, ChefHat } from 'lucide-react';
+import { Sparkles, AlertCircle, ChefHat, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function RecipeGenerator() {
@@ -33,7 +33,7 @@ export default function RecipeGenerator() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-white rounded-3xl shadow-xl border border-border p-6 sm:p-8 space-y-6"
+        className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl ring-1 ring-white/50 border border-border p-6 sm:p-8 space-y-6"
       >
         {/* Header */}
         <div className="text-center space-y-2">
@@ -44,7 +44,7 @@ export default function RecipeGenerator() {
           <h2 className="text-2xl sm:text-3xl font-bold font-heading">
             What&apos;s in Your Fridge?
           </h2>
-          <p className="text-muted-foreground text-sm">
+          <p className="text-muted-foreground text-sm opacity-70">
             Add your ingredients and let AI create the perfect recipe
           </p>
         </div>
@@ -112,6 +112,7 @@ export default function RecipeGenerator() {
             <>
               <Sparkles className="w-5 h-5" />
               Generate Recipe
+              <ArrowRight className="w-4 h-4" />
             </>
           )}
         </Button>
@@ -134,7 +135,7 @@ export default function RecipeGenerator() {
                 </motion.span>
               ))}
             </div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground opacity-50">
               Our AI chef is creating something delicious...
             </p>
           </motion.div>

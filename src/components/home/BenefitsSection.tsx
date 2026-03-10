@@ -32,7 +32,7 @@ const BENEFITS = [
 
 export default function BenefitsSection() {
   return (
-    <section className="py-20 bg-muted">
+    <section className="py-20 bg-muted section-angle-top">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,10 +40,10 @@ export default function BenefitsSection() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold font-heading">
+          <h2 className="text-3xl sm:text-4xl font-heading">
             Why Use <span className="gradient-brand-text">FridgeChef AI</span>?
           </h2>
-          <p className="text-muted-foreground mt-3 max-w-lg mx-auto">
+          <p className="text-muted-foreground mt-3 max-w-lg mx-auto opacity-70">
             More than just recipes — it&apos;s a smarter way to cook
           </p>
         </motion.div>
@@ -56,13 +56,13 @@ export default function BenefitsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-white rounded-2xl p-6 border border-border hover:shadow-lg transition-shadow"
+              className="bg-white rounded-2xl p-6 border border-border shadow-sm hover:shadow-xl transition-shadow"
             >
               <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${benefit.gradient} flex items-center justify-center mb-4`}>
                 <benefit.icon className="w-6 h-6 text-white" />
               </div>
               <h3 className="font-bold font-heading mb-2">{benefit.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{benefit.description}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed opacity-70">{benefit.description}</p>
             </motion.div>
           ))}
         </div>

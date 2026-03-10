@@ -13,7 +13,7 @@ export default function PartnersSection() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold font-heading">
+          <h2 className="text-3xl sm:text-4xl font-heading">
             Our <span className="gradient-brand-text">Partners</span>
           </h2>
           <p className="text-muted-foreground mt-3 max-w-lg mx-auto">

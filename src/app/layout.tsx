@@ -1,26 +1,50 @@
 import type { Metadata } from 'next';
-import { Inter, Poppins } from 'next/font/google';
+import { Inter, Instrument_Serif } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { ToastProvider } from '@/components/ui/Toast';
 import AuthModal from '@/components/auth/AuthModal';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin'],
 });
 
-const poppins = Poppins({
-  variable: '--font-poppins',
+const instrumentSerif = Instrument_Serif({
+  variable: '--font-serif',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400'],
+  style: ['normal', 'italic'],
 });
 
 export const metadata: Metadata = {
   title: 'FridgeChef AI — Turn Your Ingredients Into Delicious Meals',
   description: 'AI-powered recipe generator that transforms your available ingredients into delicious, step-by-step recipes. Save money, reduce food waste, and discover new meals.',
   keywords: ['recipe generator', 'AI recipes', 'meal planning', 'food waste reduction', 'cooking', 'ingredients'],
+  openGraph: {
+    title: 'FridgeChef AI — Turn Your Ingredients Into Delicious Meals',
+    description: 'AI-powered recipe generator that transforms your available ingredients into delicious recipes. Reduce waste, save money, discover new meals.',
+    url: 'https://fridgechef-pi.vercel.app',
+    siteName: 'FridgeChef AI',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&h=630&fit=crop',
+        width: 1200,
+        height: 630,
+        alt: 'FridgeChef AI — AI-Powered Recipe Generator',
+      },
+    ],
+    locale: 'en_GB',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FridgeChef AI — Turn Your Ingredients Into Delicious Meals',
+    description: 'AI-powered recipe generator. Tell us what\'s in your fridge and get a personalised recipe in seconds.',
+    images: ['https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&h=630&fit=crop'],
+  },
 };
 
 export default function RootLayout({
@@ -30,13 +54,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${poppins.variable} antialiased font-sans`}>
+      <body className={`${inter.variable} ${instrumentSerif.variable} antialiased font-sans`}>
+
         <ToastProvider>
           <Navbar />
           <main>{children}</main>
           <Footer />
           <AuthModal />
         </ToastProvider>
+        <Analytics />
       </body>
     </html>
   );

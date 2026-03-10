@@ -34,7 +34,7 @@ const STATS = [
 
 export default function SocialProofSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white section-angle-top">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
@@ -48,10 +48,10 @@ export default function SocialProofSection() {
               className="text-center"
             >
               <stat.icon className="w-8 h-8 text-brand-orange mx-auto mb-2" />
-              <p className="text-2xl sm:text-3xl font-extrabold font-heading gradient-brand-text">
+              <p className="text-2xl sm:text-3xl font-heading gradient-brand-text">
                 {stat.value}
               </p>
-              <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
+              <p className="text-sm text-muted-foreground mt-1 opacity-50">{stat.label}</p>
             </motion.div>
           ))}
         </div>
@@ -63,7 +63,7 @@ export default function SocialProofSection() {
           viewport={{ once: true }}
           className="text-center mb-10"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold font-heading">
+          <h2 className="text-3xl sm:text-4xl font-heading">
             What Our <span className="gradient-brand-text">Users Say</span>
           </h2>
         </motion.div>
@@ -76,17 +76,17 @@ export default function SocialProofSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-muted rounded-2xl p-6 space-y-3"
+              className="bg-gradient-to-br from-muted to-white rounded-2xl p-6 space-y-3 shadow-inner"
             >
               <StarRating rating={review.rating} size="sm" />
-              <p className="text-sm text-muted-foreground leading-relaxed">&ldquo;{review.text}&rdquo;</p>
+              <p className="text-sm text-muted-foreground leading-relaxed opacity-70">&ldquo;{review.text}&rdquo;</p>
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-full gradient-brand flex items-center justify-center text-white text-xs font-bold">
                   {review.name.charAt(0)}
                 </div>
                 <div>
                   <p className="text-sm font-semibold">{review.name}</p>
-                  <p className="text-xs text-muted-foreground">{review.location}</p>
+                  <p className="text-xs text-muted-foreground opacity-40">{review.location}</p>
                 </div>
               </div>
             </motion.div>
