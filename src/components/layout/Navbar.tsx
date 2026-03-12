@@ -33,8 +33,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-2">
             <ChefHat className="w-8 h-8 text-brand-orange" />
             <span className="text-xl font-bold font-heading">
-              <span className="gradient-brand-text">FridgeChef</span>
-              <span className="text-brand-orange ml-1 text-sm font-normal">AI</span>
+              <span className="gradient-brand-text">Cheffy</span>
             </span>
           </Link>
 

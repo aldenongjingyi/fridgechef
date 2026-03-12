@@ -41,7 +41,7 @@ export default function BenefitsSection() {
           className="text-center mb-14"
         >
           <h2 className="text-3xl sm:text-4xl font-heading">
-            Why Use <span className="gradient-brand-text">FridgeChef AI</span>?
+            Why Use <span className="gradient-brand-text">Cheffy</span>?
           </h2>
           <p className="text-muted-foreground mt-3 max-w-lg mx-auto opacity-70">
             More than just recipes — it&apos;s a smarter way to cook

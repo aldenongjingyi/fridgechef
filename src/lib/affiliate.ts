@@ -12,7 +12,7 @@ export function generateAffiliateLink({
   recipeName,
 }: AffiliateParams): string {
   const url = new URL(baseUrl);
-  url.searchParams.set('utm_source', 'fridgechef');
+  url.searchParams.set('utm_source', 'cheffy');
   url.searchParams.set('utm_medium', 'referral');
   url.searchParams.set('utm_campaign', 'recipe_partner');
   url.searchParams.set('utm_content', partner.toLowerCase().replace(/\s+/g, '_'));

@@ -4,11 +4,11 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const FOOD_IMAGES = [
-  { emoji: '🍝', title: 'Creamy Garlic Pasta', bg: 'from-amber-100 to-orange-100' },
-  { emoji: '🍛', title: 'Thai Green Curry', bg: 'from-green-100 to-emerald-100' },
-  { emoji: '🥗', title: 'Mediterranean Bowl', bg: 'from-teal-100 to-cyan-100' },
-  { emoji: '🍔', title: 'Classic Beef Burger', bg: 'from-red-100 to-orange-100' },
-  { emoji: '🍜', title: 'Japanese Ramen', bg: 'from-yellow-100 to-amber-100' },
+  { image: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&h=600&fit=crop', title: 'Creamy Garlic Pasta', bg: 'from-amber-100 to-orange-100' },
+  { image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=600&h=600&fit=crop', title: 'Thai Green Curry', bg: 'from-green-100 to-emerald-100' },
+  { image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=600&fit=crop', title: 'Mediterranean Bowl', bg: 'from-teal-100 to-cyan-100' },
+  { image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=600&fit=crop', title: 'Classic Beef Burger', bg: 'from-red-100 to-orange-100' },
+  { image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600&h=600&fit=crop', title: 'Japanese Ramen', bg: 'from-yellow-100 to-amber-100' },
 ];
 
 export default function HeroCarousel() {
@@ -33,8 +33,12 @@ export default function HeroCarousel() {
             transition={{ duration: 0.5 }}
             className={`absolute inset-0 bg-gradient-to-br ${FOOD_IMAGES[current].bg} flex flex-col items-center justify-center`}
           >
-            <span className="text-8xl sm:text-9xl">{FOOD_IMAGES[current].emoji}</span>
-            <p className="mt-4 text-lg font-semibold text-foreground/80 font-heading">
+            <img
+              src={FOOD_IMAGES[current].image}
+              alt={FOOD_IMAGES[current].title}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <p className="relative mt-auto mb-6 text-lg font-semibold text-white font-heading drop-shadow-lg">
               {FOOD_IMAGES[current].title}
             </p>
           </motion.div>

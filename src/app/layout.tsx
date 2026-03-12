@@ -1,11 +1,14 @@
 import type { Metadata } from 'next';
-import { Inter, Instrument_Serif } from 'next/font/google';
+import { Inter, Instrument_Serif, Geist } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { ToastProvider } from '@/components/ui/Toast';
 import AuthModal from '@/components/auth/AuthModal';
 import { Analytics } from '@vercel/analytics/next';
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const inter = Inter({
   variable: '--font-inter',
@@ -20,20 +23,20 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: 'FridgeChef AI — Turn Your Ingredients Into Delicious Meals',
+  title: 'Cheffy — Turn Your Ingredients Into Delicious Meals',
   description: 'AI-powered recipe generator that transforms your available ingredients into delicious, step-by-step recipes. Save money, reduce food waste, and discover new meals.',
   keywords: ['recipe generator', 'AI recipes', 'meal planning', 'food waste reduction', 'cooking', 'ingredients'],
   openGraph: {
-    title: 'FridgeChef AI — Turn Your Ingredients Into Delicious Meals',
+    title: 'Cheffy — Turn Your Ingredients Into Delicious Meals',
     description: 'AI-powered recipe generator that transforms your available ingredients into delicious recipes. Reduce waste, save money, discover new meals.',
     url: 'https://fridgechef-pi.vercel.app',
-    siteName: 'FridgeChef AI',
+    siteName: 'Cheffy',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&h=630&fit=crop',
         width: 1200,
         height: 630,
-        alt: 'FridgeChef AI — AI-Powered Recipe Generator',
+        alt: 'Cheffy — AI-Powered Recipe Generator',
       },
     ],
     locale: 'en_GB',
@@ -41,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FridgeChef AI — Turn Your Ingredients Into Delicious Meals',
-    description: 'AI-powered recipe generator. Tell us what\'s in your fridge and get a personalised recipe in seconds.',
+    title: 'Cheffy — Turn Your Ingredients Into Delicious Meals',
+    description: 'AI-powered recipe generator. Tell us what ingredients you have and get a personalised recipe in seconds.',
     images: ['https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&h=630&fit=crop'],
   },
 };
@@ -53,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={cn("scroll-smooth", "font-sans", geist.variable)}>
       <body className={`${inter.variable} ${instrumentSerif.variable} antialiased font-sans`}>
 
         <ToastProvider>

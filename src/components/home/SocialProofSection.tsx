@@ -8,7 +8,7 @@ const REVIEWS = [
   {
     name: 'Sarah M.',
     location: 'London',
-    text: 'Absolutely brilliant! I had random veg in my fridge and FridgeChef made the most amazing stir-fry recipe. My family loved it.',
+    text: 'Absolutely brilliant! I had random veg in my fridge and Cheffy made the most amazing stir-fry recipe. My family loved it.',
     rating: 5,
   },
   {

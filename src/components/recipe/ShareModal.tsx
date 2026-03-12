@@ -42,7 +42,7 @@ export default function ShareModal({ isOpen, onClose, recipe }: ShareModalProps)
     {
       name: 'Email',
       icon: '\uD83D\uDCE7',
-      url: `mailto:?subject=${encodeURIComponent(recipe.title + ' \u2014 FridgeChef AI')}&body=${encodeURIComponent(text + '\n\n' + url)}`,
+      url: `mailto:?subject=${encodeURIComponent(recipe.title + ' \u2014 Cheffy')}&body=${encodeURIComponent(text + '\n\n' + url)}`,
     },
   ];
 
