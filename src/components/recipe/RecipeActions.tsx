@@ -2,10 +2,10 @@
 
 import { useState } from 'react';
 import type { Recipe } from '@/types';
-import Button from '@/components/ui/Button';
-import StarRating from '@/components/ui/StarRating';
+import { Button } from '@/components/ui/button';
+import StarRating from '@/components/ui/star-rating';
 import { useAuthStore } from '@/stores/auth';
-import { useToast } from '@/components/ui/Toast';
+import { toast } from 'sonner';
 import MealKitModal from './MealKitModal';
 import SupermarketModal from './SupermarketModal';
 import ShareModal from './ShareModal';
@@ -25,7 +25,6 @@ interface RecipeActionsProps {
 
 export default function RecipeActions({ recipe, isSaved, setIsSaved, userRating, setUserRating }: RecipeActionsProps) {
   const { user, setAuthModal } = useAuthStore();
-  const { addToast } = useToast();
   const [mealKitOpen, setMealKitOpen] = useState(false);
   const [supermarketOpen, setSupermarketOpen] = useState(false);
   const [shareOpen, setShareOpen] = useState(false);
@@ -46,10 +45,10 @@ export default function RecipeActions({ recipe, isSaved, setIsSaved, userRating,
       });
       if (res.ok) {
         setIsSaved(!isSaved);
-        addToast(isSaved ? 'Recipe removed from saved' : 'Recipe saved!', 'success');
+        toast.success(isSaved ? 'Recipe removed from saved' : 'Recipe saved!');
       }
     } catch {
-      addToast('Failed to save recipe', 'error');
+      toast.error('Failed to save recipe');
     }
     setSavingState(false);
   };
@@ -67,10 +66,10 @@ export default function RecipeActions({ recipe, isSaved, setIsSaved, userRating,
       });
       if (res.ok) {
         setUserRating(rating);
-        addToast(`Rated ${rating} stars!`, 'success');
+        toast.success(`Rated ${rating} stars!`);
       }
     } catch {
-      addToast('Failed to rate recipe', 'error');
+      toast.error('Failed to rate recipe');
     }
   };
 

@@ -2,9 +2,9 @@
 
 import { useRecipeGenerator } from '@/hooks/useRecipeGenerator';
 import IngredientInput from './IngredientInput';
-import Dropdown from '@/components/ui/Dropdown';
-import RadioGroup from '@/components/ui/RadioGroup';
-import Button from '@/components/ui/Button';
+import Dropdown from '@/components/ui/dropdown';
+import RadioGroup from '@/components/ui/radio-group';
+import { Button } from '@/components/ui/button';
 import { DIETARY_OPTIONS, CUISINE_OPTIONS, COOKING_TIME_OPTIONS, SKILL_LEVEL_OPTIONS } from '@/lib/constants';
 import { Sparkles, AlertCircle, ChefHat, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';

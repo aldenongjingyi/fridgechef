@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import Modal from '@/components/ui/Modal';
-import Button from '@/components/ui/Button';
+import Modal from '@/components/ui/modal';
+import { Button } from '@/components/ui/button';
 import type { Recipe, ChatMessage } from '@/types';
 import { Send, ChefHat, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -144,7 +144,7 @@ export default function AskAiChefModal({ isOpen, onClose, recipe }: AskAiChefMod
           />
           <Button
             variant="primary"
-            size="md"
+            size="default"
             onClick={() => handleSend()}
             disabled={!input.trim() || loading}
           >

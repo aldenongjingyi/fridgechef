@@ -9,7 +9,7 @@ import IngredientList from './IngredientList';
 import InstructionSteps from './InstructionSteps';
 import ChefTips from './ChefTips';
 import RecipeActions from './RecipeActions';
-import Badge from '@/components/ui/Badge';
+import { Badge } from '@/components/ui/badge';
 import { Clock, Users, Flame, BarChart3, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 

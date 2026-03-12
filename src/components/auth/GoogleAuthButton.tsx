@@ -1,7 +1,7 @@
 'use client';
 
 import { createClient } from '@/lib/supabase/client';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 
 export default function GoogleAuthButton() {
   const handleGoogleSignIn = async () => {

@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import Modal from '@/components/ui/Modal';
-import Button from '@/components/ui/Button';
+import Modal from '@/components/ui/modal';
+import { Button } from '@/components/ui/button';
 import type { Recipe } from '@/types';
 import { Copy, Check } from 'lucide-react';
 

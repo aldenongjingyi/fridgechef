@@ -3,8 +3,8 @@
 import { motion } from 'framer-motion';
 import { SAMPLE_RECIPES } from '@/lib/constants';
 import { Clock, Users } from 'lucide-react';
-import StarRating from '@/components/ui/StarRating';
-import Badge from '@/components/ui/Badge';
+import StarRating from '@/components/ui/star-rating';
+import { Badge } from '@/components/ui/badge';
 
 const RECIPE_IMAGES: Record<string, string> = {
   'sample-1': 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400&h=300&fit=crop',

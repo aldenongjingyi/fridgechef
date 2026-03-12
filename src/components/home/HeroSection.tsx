@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import HeroCarousel from './HeroCarousel';
 import FloatingBadges from './FloatingBadges';
 import { Sparkles, ChevronDown, ArrowRight } from 'lucide-react';

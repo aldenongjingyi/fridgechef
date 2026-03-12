@@ -1,5 +1,5 @@
 import type { Recipe } from '@/types';
-import StarRating from '@/components/ui/StarRating';
+import StarRating from '@/components/ui/star-rating';
 
 interface RecipeHeaderProps {
   recipe: Recipe;

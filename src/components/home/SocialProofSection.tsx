@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Star, Users, ChefHat, Leaf } from 'lucide-react';
-import StarRating from '@/components/ui/StarRating';
+import StarRating from '@/components/ui/star-rating';
 
 const REVIEWS = [
   {

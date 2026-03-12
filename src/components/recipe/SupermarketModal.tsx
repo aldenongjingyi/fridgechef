@@ -1,6 +1,6 @@
 'use client';
 
-import Modal from '@/components/ui/Modal';
+import Modal from '@/components/ui/modal';
 import type { Recipe } from '@/types';
 import { SUPERMARKET_PARTNERS } from '@/lib/constants';
 import { generateAffiliateLink } from '@/lib/affiliate';

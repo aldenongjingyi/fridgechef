@@ -1,7 +1,7 @@
 import type { Recipe } from '@/types';
 import { formatTime, formatDate } from '@/lib/utils';
-import StarRating from '@/components/ui/StarRating';
-import Badge from '@/components/ui/Badge';
+import StarRating from '@/components/ui/star-rating';
+import { Badge } from '@/components/ui/badge';
 import { Clock, Users } from 'lucide-react';
 import Link from 'next/link';
 

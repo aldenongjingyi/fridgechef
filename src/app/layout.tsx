@@ -1,14 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter, Instrument_Serif, Geist } from 'next/font/google';
+import { Inter, Instrument_Serif } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import { ToastProvider } from '@/components/ui/Toast';
 import AuthModal from '@/components/auth/AuthModal';
 import { Analytics } from '@vercel/analytics/next';
-import { cn } from "@/lib/utils";
-
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+import { Toaster } from '@/components/ui/sonner';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -56,15 +53,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("scroll-smooth", "font-sans", geist.variable)}>
+    <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${instrumentSerif.variable} antialiased font-sans`}>
-
-        <ToastProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-          <AuthModal />
-        </ToastProvider>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+        <AuthModal />
+        <Toaster />
         <Analytics />
       </body>
     </html>

@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import { createClient } from '@/lib/supabase/client';
-import Button from '@/components/ui/Button';
-import Input from '@/components/ui/Input';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { useAuthStore } from '@/stores/auth';
 import { ChefHat, Mail, Lock, User } from 'lucide-react';
 import GoogleAuthButton from './GoogleAuthButton';

@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
 import { Menu, X, ChefHat, User, LogOut } from 'lucide-react';
 import Link from 'next/link';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import { useAuthStore } from '@/stores/auth';
 
 export default function Navbar() {

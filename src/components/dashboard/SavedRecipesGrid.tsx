@@ -3,10 +3,10 @@
 import { useState, useMemo } from 'react';
 import type { SavedRecipe } from '@/types';
 import RecipeCardSmall from './RecipeCardSmall';
-import Dropdown from '@/components/ui/Dropdown';
+import Dropdown from '@/components/ui/dropdown';
 import { Search, BookmarkX } from 'lucide-react';
 import Link from 'next/link';
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 
 interface SavedRecipesGridProps {
   recipes: SavedRecipe[];
